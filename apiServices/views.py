@@ -7,7 +7,6 @@ def index(request):
 	return render(request,'searchLanding.html')
 
 def spotifyQuery(request):
-	print "=====SPOTIFY QUERY ===="
 	encodeQuery = urllib.quote(request.POST['artistQuery'])
 	spotifyData = service.getSpotifyData(encodeQuery)
 

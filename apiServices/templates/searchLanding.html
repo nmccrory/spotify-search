@@ -14,13 +14,12 @@
 				<div id="searchBox">
 					<h1>Find your favorite artist</h1>
 					<form id="searchForm" action="/spotifyQuery/" method='post'>
-					{% csrf_token %}
+						{% csrf_token %}
 						<input type="text" name="artistQuery" placeholder=''>
 						<button type='submit'>Search</button>
 					</form>
 				</div>
 			</div>
-			
 		</div>
 	</body>
 </html>
