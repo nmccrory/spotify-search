@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Artist Search powered by Spotify</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'css/searchStyles.css' %}">
+	</head>
+	<body>
+		<div id='landingContainer'>
+			<div id='logoWrapper'>
+				<p>Powered by</p>
+				<img src="{% static 'images/spotify.png' %}" alt="">
+			</div>
+			<div id="searchFormContainer">
+				<div id="searchBox">
+					<h1>Find your favorite artist</h1>
+					<form id="searchForm" action="/spotifyQuery/" method='post'>
+					{% csrf_token %}
+						<input type="text" name="artistQuery" placeholder=''>
+						<button type='submit'>Search</button>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
